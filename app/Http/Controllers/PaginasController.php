@@ -7,21 +7,21 @@ use Illuminate\Http\Request;
 
 class PaginasController extends Controller {
 
-	//
+    //
 
-	public function acerca()
-	{
-		
-		$apoyo = [
-			'David' , 'Roger' , 'Adrian'
-		];
+    public function acerca()
+    {
 
-		return view('paginas.acerca', compact('apoyo')); 
-	}
+        $apoyo = [
+            'David', 'Roger', 'Adrian'
+        ];
 
-	public function contacto()
-	{
-		return view('contacto');
-	}
+        return view('paginas.acerca', compact('apoyo'));
+    }
+
+    public function contacto()
+    {
+        return view('contacto');
+    }
 
 }

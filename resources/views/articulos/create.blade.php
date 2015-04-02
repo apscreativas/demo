@@ -7,8 +7,9 @@
 
     {!! Form::open(['url' => 'articulos']) !!}
 
+    <!-- Titulo Form Input   -->
     <div class="form-group">
-        {!! Form::label('titulo' , 'Titulo') !!}
+        {!! Form::label('titulo' , 'Titulo: ') !!}
         {!! Form::text('titulo' , null, ['class' => 'form-control']) !!}
     </div>
 

@@ -7,12 +7,12 @@ use App\Articulos;
 
 use Request;
 
-class ArticulosController extends Controller
-{
+class ArticulosController extends Controller {
 
     public function index()
     {
         $articulos = Articulos::all();
+
         return view('articulos.index', compact('articulos'));
     }
 
@@ -20,6 +20,7 @@ class ArticulosController extends Controller
 
     {
         $articulo = Articulos::find($id);
+
         return view('articulos.show', compact('articulo'));
     }
 
@@ -33,6 +34,7 @@ class ArticulosController extends Controller
 
     {
         Articulos::create($request->all());
+
         return redirect('articulos');
     }
 
