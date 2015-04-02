@@ -38,4 +38,19 @@ class ArticulosController extends Controller {
         return redirect('articulos');
     }
 
+    public function edit($id)
+{
+    $articulo = Articulos::find($id);
+
+    return view('articulos.edit', compact ('articulo'));
+
+}
+    public function update($id, CreateArticuloRequest $request)
+    {
+        $articulo = Articulos::find($id);
+        $articulo->update($request->all());
+
+        return redirect('articulos');
+    }
+
 }

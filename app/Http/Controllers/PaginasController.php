@@ -11,7 +11,6 @@ class PaginasController extends Controller {
 
     public function acerca()
     {
-
         $apoyo = [
             'David', 'Roger', 'Adrian'
         ];
