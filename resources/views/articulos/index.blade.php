@@ -1,15 +1,35 @@
 @extends ('master')
 
 @section ('contenido')
+    <br>
 
-<h1>Listado de Articulos</h1>
 
-@foreach ($articulos as $articulo)
+    <div class="panel panel-default">
+        <div class="panel-heading"> Lista de Artículos</div>
+        <table class="table table-responsive table-bordered">
+            <thead>
+                <tr>
+                    <th> Artículo </th>
+                    <th> Autor </th>
+                    <th> Acciones </th>
+                </tr>
+            </thead>
 
-	<article>
-		<a href="/articulos/{{ $articulo->id }}"> {{ $articulo->titulo }}</a> 
-	</article>
+            <tbody>
+            @foreach ($articulos as $articulo)
+                <tr>
+                    <td> {{$articulo->titulo}}</td>
+                    <td> {{$articulo->autor}}</td>
+                    <td>
+                        <a href="/articulos/{{$articulo->id}}/edit" class="btn btn-warning btn-xs">Editar</a>
+                        <a href="/articulos/{{$articulo->id}}" class="btn btn-success btn-xs">Detalles</a>
+                    </td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+    </div>
 
-@endforeach
+
 
 @stop

@@ -30,6 +30,12 @@
 
     {!! Form::close() !!}
 
+    {!! Form::open(['method' => 'DELETE' , 'route' => ['articulos.destroy' , $articulo->id]]) !!}
+    <div class="form-group">
+        {!! Form::submit('Elimina Artículo', ['class' => 'btn btn-danger form-control']) !!}
+    </div>
+    {!! Form::close() !!}
+
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
